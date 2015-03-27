@@ -1,0 +1,45 @@
+{
+  "version": "1.1.0",
+  "name": "meta-matter",
+  "description": "A fast, easy to use, and customizable extractor for front matter in various formats (YAML, TOML, etc.) between a pair of delimiters.",
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha --reporter spec --bail"
+  },
+  "author": "Jak Wings <jakwings@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/jakwings/meta-matter",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jakwings/meta-matter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jakwings/meta-matter/issues"
+  },
+  "dependencies": {
+    "js-yaml": "~3.2.7",
+    "toml": "~2.2.1"
+  },
+  "devDependencies": {
+    "mocha": "~2.2.1",
+    "should": "~5.2.0"
+  },
+  "keywords": [
+    "front-matter",
+    "gray-matter",
+    "metadata",
+    "jekyll",
+    "parser",
+    "site",
+    "static",
+    "markdown",
+    "documentation",
+    "yaml",
+    "toml",
+    "cms",
+    "blog"
+  ]
+}
