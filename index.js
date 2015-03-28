@@ -189,6 +189,8 @@ function formatString(str) {
 function formatDelimiters(delims, nothrow) {
   if (!Array.isArray(delims)) {
     delims = [delims];
+  } else {
+    delims = delims.slice(0);  // shallow-clone
   }
   delims[0] = delims[0] != null ?
       delims[0] : (delims[1] != null ? delims[1] : '---');
@@ -210,6 +212,13 @@ function formatOptions(opts) {
       lang: 'yaml',
       delims: ['---', '---'],
       parsers: null
+    };
+  } else {  // shallow-clone
+    opts = {
+      loose: opts.loose,
+      lang: opts.lang,
+      delims: opts.delims,
+      parsers: opts.parsers
     };
   }
   opts.lang = (opts.lang != null) ? opts.lang : 'yaml';
