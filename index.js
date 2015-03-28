@@ -54,8 +54,9 @@ function matter(str, opts) {
   }  // else: Tolerate the case that a linefeed is missing: <end-delimiter><body>
   if (str[bodyStart] === '\r') { bodyStart++; }
   if (str[bodyStart] === '\n') { bodyStart++; }
-  if (dataStart < dataEnd) {
-    var data = str.substr(dataStart, dataEnd - dataStart).trim();
+  var data;
+  if (dataStart < dataEnd &&
+      (data = str.substr(dataStart, dataEnd - dataStart).trim())) {
     var lang = str.substr(header.length, dataStart - header.length)
                   .trim().toLowerCase() || opts.lang;
     var parse;
