@@ -103,7 +103,7 @@ describe('matter(string, options)', function () {
         matter('foobar', {delims: [null, false]});
       }).should.throw(Error);
     });
-    it('options.parsers should be a function or dictionary of function #4', function () {
+    it('options.parsers should be a function or dictionary of function', function () {
       (function () {
         matter('---\nfoo: bar\n---', {parsers: {yaml: true}});
       }).should.throw(Error);
