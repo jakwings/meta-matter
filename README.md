@@ -22,22 +22,25 @@ npm install meta-matter
 ## Usage
 
 ```javascript
-var matter = require('meta-data');
+var matter = require('meta-matter');
 
 matter('---\nfoo: bar\n---\nbaz');
-// return {
-//   src: '---\nfoo: bar\n---\nbaz',
-//   body: 'baz',
-//   data: {foo: 'bar'}
-// }
+/* return {
+  src: "---\nfoo: bar\n---\nbaz",
+  body: "baz",
+  data: {foo: "bar"}
+}
+*/
 
 matter.readFileSync('example.md', {delims: ['--[', ']--']});
 
-// example.md:
-//
-// --[ TOML
-// foo = "bar"
-// ]--
+/* example.md:
+
+--[ TOML
+foo = "bar"
+]--
+baz
+*/
 ```
 
 
