@@ -1,0 +1,4 @@
+--- toml  
+foo = "bar"
+---  
+baz
