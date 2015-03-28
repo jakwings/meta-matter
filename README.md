@@ -15,7 +15,7 @@ Features:
 ## Installation
 
 ```bash
-npm install meta-data
+npm install meta-matter
 ```
 
 
