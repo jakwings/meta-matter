@@ -73,7 +73,7 @@ function matter(str, opts) {
       throw new Error(message('No parser found for the language: ' + lang));
     }
   }
-  result.body = str.substr(bodyStart);
+  result.body = result.body.substr(bodyStart);
 
   return result;
 }
