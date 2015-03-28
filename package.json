@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "name": "meta-matter",
   "description": "A fast, easy to use, and customizable extractor for front matter in various formats (YAML, TOML, etc.) between a pair of delimiters.",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "node node_modules/mocha/bin/mocha --reporter spec --bail"
+    "test": "node node_modules/mocha/bin/mocha --reporter spec --bail test/*.js"
   },
   "author": "Jak Wings <jakwings@gmail.com>",
   "license": "MIT",
