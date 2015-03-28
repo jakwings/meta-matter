@@ -9,7 +9,7 @@ Features:
 
 *   Delimiters are customizable. (a language name can be placed next to the first delimiter)
 *   Parsers are customizable. (with builtin YAML and TOML parsers)
-*   Currently, LF (0x0A) is the only recognizable newline.
+*   LF (0x0A) and CRLF (\x0D\x0A) are both recognizable newlines.
 
 
 ## Installation
