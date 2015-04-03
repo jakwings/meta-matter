@@ -57,15 +57,15 @@ Options:
 *   `options.delims {(String|Array)?}`: Custom delimiters. Default: `'---'` or `['---', '---']`
 *   `options.parsers {(Function|Object)?}`: Custom parser(s). Default: `{'yaml': matter.parsers.yaml,'toml': matter.parsers.toml}`
     * `{function(text, {loose: Boolean}): Mixed}` A parser function. `options.lang` will be ignored.
-    * `{Object.<String, Function>}`: A map from languages to parser functions.
+    * `{Object.<String, Function>}`: A map from languages to parser functions. If no parser is found in it, then search the builtin parsers.
+
+A language name (case-insensitive, lower-case preferred) can be appended to the first delimiter in the source text, e.g. `--- YAML`, and it will override `options.lang` but not `options.parsers`. All builtin languages are "yaml" and "toml".
 
 The returned object has three properties:
 
 *   `src {String}`: The original input string.
-*   `body {String}`: The input string without front matter.
-*   `data {Mixed}`: The data returned from the parsers. Default: `null`
-
-A language name (case-insensitive, lower-case preferred) can be appended to the first delimiter in the source text, e.g. `--- YAML`, and it will override `options.lang` but not `options.parsers`. All builtin languages are "yaml" and "toml".
+*   `body {String}`: The input string without front matter. (`body.length <= src.length`)
+*   `data {Mixed}`: The data returned from the parsers. Default: `null` (if front matter is missing or whitespace only)
 
 ### matter.test(string[, options])
 
@@ -99,6 +99,8 @@ All builtin parsers (allowed to be modified):
 
 *   `{function(str, opts): Mixed} matter.parsers.yaml`: The YAML parser.
 *   `{function(str, opts): Mixed} matter.parsers.toml`: The TOML parser.
+
+Currently, `opts` only has one property `loose`, which comes from the [provided options](#matterstring-options).
 
 All builtin parsers will return `null` when an error occurs.
 
