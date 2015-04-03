@@ -1,5 +1,5 @@
 {
-  "version": "1.3.1",
+  "version": "1.3.2",
   "name": "meta-matter",
   "description": "A fast, easy to use, and customizable extractor for front matter in various formats (YAML, TOML, etc.) between a pair of delimiters.",
   "main": "index.js",
