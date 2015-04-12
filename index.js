@@ -257,7 +257,8 @@ matter.parsers = {
     opts = (opts == null ? {} : opts);
     var parser = fm_yaml || (fm_yaml = require('js-yaml'));
     try {
-      return parser.safeLoad(str);
+      var data = parser.safeLoad(str);
+      return data !== undefined ? data : {};
     } catch (err) {
       return null;
     }
