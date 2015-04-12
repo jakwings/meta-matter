@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "js-yaml": "~3.2.7",
-    "toml": "~2.2.1"
+    "toml-j0.4": "~1.0.0"
   },
   "devDependencies": {
     "mocha": "~2.2.1",
