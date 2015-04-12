@@ -244,7 +244,7 @@ function message(msg) {
 var fm_yaml, fm_toml;
 matter.modules = {
   get yaml() { return fm_yaml || (fm_yaml = require('js-yaml')); },
-  get toml() { return fm_toml || (fm_toml = require('toml')); },
+  get toml() { return fm_toml || (fm_toml = require('toml-j0.4')); },
 };
 
 matter.parsers = {
@@ -269,7 +269,7 @@ matter.parsers = {
    * @return {Mixed}
    */
   toml: function (str, opts) {
-    var parser = fm_toml || (fm_toml = require('toml'));
+    var parser = fm_toml || (fm_toml = require('toml-j0.4'));
     try {
       return parser.parse(str);
     } catch (err) {
