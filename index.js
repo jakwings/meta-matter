@@ -256,9 +256,8 @@ matter.parsers = {
   yaml: function (str, opts) {
     opts = (opts == null ? {} : opts);
     var parser = fm_yaml || (fm_yaml = require('js-yaml'));
-    var safeLoad = (opts == null || opts.unsafe == null || !opts.unsafe);
     try {
-      return parser.safeLoad(str, opts);
+      return parser.safeLoad(str);
     } catch (err) {
       return null;
     }
