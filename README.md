@@ -91,7 +91,7 @@ The returned object will have one more property "path" for the real file path.
 An object with the cache of required modules (lazily loaded):
 
 *   `{Object} matter.modules.yaml: require('js-yaml')`
-*   `{Object} matter.modules.toml: require('toml')`
+*   `{Object} matter.modules.toml: require('toml-j0.4')`
 
 ### matter.parsers
 
